@@ -67,7 +67,7 @@ const questions = [
   }
 ];
 
-function FlashCards(props) {
+/*function FlashCards(props) {
   return (
     <div className="flashcards">
       {props.cards.map((card) => {
@@ -79,6 +79,30 @@ function FlashCards(props) {
             onClick={props.swCard}
           >
             {card.question}
+          </div>
+        );
+      })}
+    </div>
+  );
+}*/
+
+function FlashCards(props) {
+  const [selectedId, setSelectedId] = useState(9103);
+  const selectHandler = (id) => {
+    console.log(id);
+    setSelectedId(id !== selectedId ? id : null);
+  };
+
+  return (
+    <div className="flashcards">
+      {props.cards.map((card) => {
+        return (
+          <div
+            key={card.id}
+            className={selectedId === card.id ? "selected" : null}
+            onClick={() => selectHandler(card.id)}
+          >
+            {selectedId === card.id ? card.answer : card.question}
           </div>
         );
       })}
