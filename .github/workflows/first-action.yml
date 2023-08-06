@@ -1,10 +1,10 @@
 name:first-workflow
 on:workflow_dispatch
 jobs:
-  first-job:
-    runs-on:ubuntu-latest
-    steops:
-      - name: printing greeting
-        run: echo "Hello World"
-      - name: pringting goodbye
-        run: echo "Goodbye World"
+ first-job:
+   runs-on:ubuntu-latest
+   steops:
+     - name: printing greeting
+       run: echo "Hello World"
+     - name: pringting goodbye
+       run: echo "Goodbye World"
