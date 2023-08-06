@@ -1,0 +1,10 @@
+name:frist-workflow
+on:workflow-dispatch
+jobs:
+  first-job:
+    runs-on:ubuntu-latest
+    steops:
+      - name: printing greeting
+        run: echo "Hello World"
+      - name: pringting goodbye
+        run: echo "Goodbye World"
